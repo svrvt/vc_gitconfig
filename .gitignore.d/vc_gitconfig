@@ -1,0 +1,8 @@
+*
+!/bin/git-genlocal.sh
+!/.config/gh/config.yml
+!/.config/gh-dash/config.yml
+!/.config/gh/hosts.yml
+!/.config/lazygit/config.yml
+!/.gitconfig
+!/.gitignore.d/vc_gitconfig

@@ -1,0 +1,94 @@
+[include]
+  path = .gitconfig.local
+
+[init] 
+  defaultBranch = main 
+
+[commit]
+  gpgSign = true 
+
+[gpg] 
+  program = gpg 
+
+[core]
+  excludesFile = ~/.gitignore.global
+  editor = nvim
+  ; pager = delta
+  pager = diff-so-fancy | less
+
+; [interactive]
+;     diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    line-numbers = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+[branch] 
+  autosetuprebase = remote 
+
+[pull]
+	rebase = true
+
+; [fetch] 
+;   prune = true 
+
+; [push] 
+;   autoSetupRemote = true 
+;   default = simple 
+
+[rebase] 
+  autoStash = true 
+
+; [advice]
+; 	addIgnoredFile = false
+
+; [http]
+; 	sslVerify = true
+; 	sslBackend = schannel
+
+[credential]
+	helper = cache
+
+[color]
+  ui          = auto
+  branch      = auto
+  diff        = auto
+  interactive = auto
+
+[color  "status"]
+  added     = green
+  changed   = yellow  bold
+  untracked = red  bold
+
+[alias]
+  br     = branch
+  co     = checkout
+  db     = branch  -d
+  head   = rev-parse HEAD
+  logd   = log  --color  --graph  --abbrev-commit  --pretty=format:'%Cred%h%Creset  -%C(yellow)%d%Creset  %s  %Cgreen(%cD)  %C(bold  blue)<%an>%Creset'
+  logg   = log  --color  --graph  --abbrev-commit  --pretty=format:'%Cred%h%Creset  -%C(yellow)%d%Creset  %s  %Cgreen(%cr)  %C(bold  blue)<%an>%Creset'
+  logi   = log  --color  --graph  --abbrev-commit  --pretty=format:'%Cred%h%Creset  -%C(yellow)%d%Creset  %s  %Cgreen(%ci)  %C(bold  blue)<%an>%Creset'
+  to     = log  --no-walk  --tags  --pretty=format:'%C(auto)%aI  %H  %d'  --decorate=full
+  tt     = log  --no-walk  --tags  --pretty=format:'%C(auto)%H  %d'  --decorate=full
+  t3     = log  --no-walk  --tags  --pretty=format:'%C(auto)%h  %d'  --decorate=full
+  main = checkout main
+  pom    = push  origin  main
+  rbc    = rebase  --continue
+  rbi    = rebase  -i  origin/master
+  rbs    = rebase  --skip
+  suo    = push  --set-upstream  origin
+  cma    = commit  --all  -m
+  gm     = "!git  checkout  $1;git  merge  @{1-}"
+  sl     = stash list
+  sp     = stash pop
+  ss     = stash save
+  st     = status  --short  --branch
+  undo   = "!f()  {  git  reset  --hard  $(git  rev-parse  --abbrev-ref  HEAD)@{${1-1}};  };  f"
+  pushup = push  -u  origin  HEAD
+
