@@ -6,3 +6,4 @@
 !/.config/lazygit/config.yml
 !/.gitconfig
 !/.gitignore.d/vc_gitconfig
+!/.gitignore_global
