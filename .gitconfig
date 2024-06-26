@@ -16,10 +16,11 @@
   pager = diff-so-fancy | less
 
 [merge]
-    conflictstyle = diff3
+  conflictstyle = diff3
+	tool = vimdiff
 
 [diff]
-    colorMoved = default
+  colorMoved = default
 
 [branch] 
   autosetuprebase = remote 
@@ -27,11 +28,12 @@
 [pull]
 	rebase = true
 
-; [fetch] 
-;   prune = true 
+[fetch]
+	recurseSubmodules = true
+  ; prune = true 
 
-; [push] 
-;   autoSetupRemote = true 
+[push] 
+  autoSetupRemote = true 
 ;   default = simple 
 
 [rebase] 
@@ -55,4 +57,3 @@
   logg   = log  --color  --graph  --abbrev-commit  --pretty=format:'%Cred%h%Creset  -%C(yellow)%d%Creset  %s  %Cgreen(%cr)  %C(bold  blue)<%an>%Creset'
   logi   = log  --color  --graph  --abbrev-commit  --pretty=format:'%Cred%h%Creset  -%C(yellow)%d%Creset  %s  %Cgreen(%ci)  %C(bold  blue)<%an>%Creset'
   undo   = "!f()  {  git  reset  --hard  $(git  rev-parse  --abbrev-ref  HEAD)@{${1-1}};  };  f"
-
