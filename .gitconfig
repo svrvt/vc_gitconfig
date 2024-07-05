@@ -14,6 +14,10 @@
   excludesFile = ~/.gitignore.global
   editor = nvim
   pager = diff-so-fancy | less
+	; sparseCheckout = true
+
+[advice]
+	addIgnoredFile = false
 
 [merge]
   conflictstyle = diff3
@@ -57,3 +61,4 @@
   logg   = log  --color  --graph  --abbrev-commit  --pretty=format:'%Cred%h%Creset  -%C(yellow)%d%Creset  %s  %Cgreen(%cr)  %C(bold  blue)<%an>%Creset'
   logi   = log  --color  --graph  --abbrev-commit  --pretty=format:'%Cred%h%Creset  -%C(yellow)%d%Creset  %s  %Cgreen(%ci)  %C(bold  blue)<%an>%Creset'
   undo   = "!f()  {  git  reset  --hard  $(git  rev-parse  --abbrev-ref  HEAD)@{${1-1}};  };  f"
+

@@ -1,9 +1,15 @@
 *
+!/bin
 !/bin/git-genlocal.sh
+!/.config
+!/.config/gh
 !/.config/gh/config.yml
+!/.config/gh-dash
 !/.config/gh-dash/config.yml
 !/.config/gh/hosts.yml
+!/.config/lazygit
 !/.config/lazygit/config.yml
 !/.gitconfig
+!/.gitignore.d
 !/.gitignore.d/vc_gitconfig
 !/.gitignore_global
