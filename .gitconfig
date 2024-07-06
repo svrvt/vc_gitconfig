@@ -16,9 +16,6 @@
   pager = diff-so-fancy | less
 	; sparseCheckout = true
 
-[advice]
-	addIgnoredFile = false
-
 [merge]
   conflictstyle = diff3
 	tool = vimdiff
@@ -30,7 +27,7 @@
   autosetuprebase = remote 
 
 [pull]
-	rebase = true
+rebase = true
 
 [fetch]
 	recurseSubmodules = true
@@ -42,9 +39,6 @@
 
 [rebase] 
   autoStash = true 
-
-; [advice]
-; 	addIgnoredFile = false
 
 ; [http]
 ; 	sslVerify = true
