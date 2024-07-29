@@ -17,12 +17,30 @@ cat <<EOF >"$HOME"/.gitconfig.local
     name = Rustam Uzairov
     email = svrvt.zrv@gmail.com
     signingkey = $key_for_host
-    
+EOF
+
+if ssh -T git@github.com 2>&1 | grep -q "successfully authenticated"; then
+	# if ! grep -qE '[url "git@github.com:"]+[insteadOf = https://github.com/]' .gitconfig; then
+	if ! grep -q 'insteadOf = https://github.com/' ~/.gitconfig; then
+		cat <<EOF >>"$HOME/.gitconfig.local"
+
+# This string added via "$(realpath "$0")"
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+EOF
+	fi
+# else
+# 	git config --global --remove-section url.git@github.com:
+fi
+
+cat <<EOF >>"$HOME"/.gitconfig.local
+
 # vim: ft=ini
 EOF
 
-if ! grep -q "path = .gitconfig.local" ~/.gitconfig; then
 
+
+if ! grep -q "path = .gitconfig.local" ~/.gitconfig; then
 	cat <<EOF >>"$HOME"/.gitconfig
 [include]
   path = .gitconfig.local
