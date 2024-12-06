@@ -6,6 +6,7 @@ hostname=$(hostname)
 declare -A key_arr
 key_arr[vaio]=F217A2E9
 key_arr[aldebaran]=668D8525
+key_arr[vaio-p]=ED3FA43A
 
 key_for_host="${key_arr[$hostname]}"
 
