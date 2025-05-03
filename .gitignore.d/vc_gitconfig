@@ -11,8 +11,7 @@
 !/.config/lazygit/config.yml
 !/.config/mr
 !/.config/mr/available.d
-!/.config/mr/available.d/vc
-!/.config/mr/available.d/vc/vc_gitconfig
+!/.config/mr/available.d/workflow.vc.gitconfig
 !/.gitconfig
 !/.gitignore.d
 !/.gitignore.d/vc_gitconfig
