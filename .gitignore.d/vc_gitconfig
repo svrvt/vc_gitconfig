@@ -1,6 +1,6 @@
 *
 !/bin
-!/bin/git-genlocal.sh
+!/bin/git-local-config
 !/.config
 !/.config/gh
 !/.config/gh/config.yml
