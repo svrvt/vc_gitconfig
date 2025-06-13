@@ -13,8 +13,8 @@
 [core]
   excludesFile = ~/.gitignore.global
   editor = nvim
-  pager = diff-so-fancy | less
-	; sparseCheckout = true
+  pager = diff-so-fancy | less --tabs=4 -RFX
+  ; sparseCheckout = true
 
 [merge]
   conflictstyle = diff3
@@ -56,3 +56,5 @@ rebase = true
   logi   = log  --color  --graph  --abbrev-commit  --pretty=format:'%Cred%h%Creset  -%C(yellow)%d%Creset  %s  %Cgreen(%ci)  %C(bold  blue)<%an>%Creset'
   undo   = "!f()  {  git  reset  --hard  $(git  rev-parse  --abbrev-ref  HEAD)@{${1-1}};  };  f"
 
+[interactive]
+	diffFilter = diff-so-fancy --patch

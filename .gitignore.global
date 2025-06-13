@@ -7,7 +7,7 @@
 *.o
 *.so
 .shake
-.link
+*.link
 
 # Packages #
 # ##########

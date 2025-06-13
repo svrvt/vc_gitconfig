@@ -15,4 +15,4 @@
 !/.gitconfig
 !/.gitignore.d
 !/.gitignore.d/vc_gitconfig
-!/.gitignore_global
+!/.gitignore.global
